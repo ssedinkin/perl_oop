@@ -13,7 +13,7 @@ my $crmem = Crew->new();
 print Data::Dumper::Dumper( $crmem );
 
 # Устанавливаем поля
-###############$crmem->set_Name('иванов иван иванович');
+$crmem->set_Name('Иванов Иван Иванович');
 # Проверяем, корректно ли установлены поля
 print Data::Dumper::Dumper( $crmem );
 # Продолжаем устанавливать поля
