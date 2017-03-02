@@ -7,7 +7,6 @@ use Data::Dumper;
 
 my $crmem = Crew->new();
 
-
 # Проверяем поля объекта
 print Data::Dumper::Dumper( $crmem );
 $crmem->name('Иванов Иван Иванович');

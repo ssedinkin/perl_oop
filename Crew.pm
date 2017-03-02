@@ -25,7 +25,7 @@ sub AUTOLOAD {
     if ( $AUTOLOAD =~ /::(\w+)$/ ) {
         my $field = $1;
         if ( @_ == 2 ) {
-            $self->validation( $field, $value );
+            $self->validate( $field, $value );
             $self->{$field} = $value;
         }
         return $self->{$field}; 
@@ -35,7 +35,7 @@ sub AUTOLOAD {
     }
 }
 
-sub validation { 
+sub validate {
     my ( $self, $field, $value ) = @_;
 
     my %validation = (
