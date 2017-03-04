@@ -2,11 +2,17 @@
 
 use Crew;
 use Data::Dumper;
+use utf8;
 
-
+# Вывод кириллических символов
+binmode STDOUT, ":utf8";
+$Data::Dumper::Useqq = 1;
+sub Data::Dumper::qquote {
+    my $s = shift;
+    return "'$s'";
+}
 
 my $crmem = Crew->new();
-
 # Проверяем поля объекта
 print Data::Dumper::Dumper( $crmem );
 $crmem->name('Иванов Иван Иванович');
