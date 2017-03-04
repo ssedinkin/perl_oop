@@ -1,5 +1,4 @@
-#!/usr/bin/perl
-
+#Класс работы с членом экипажа
 package Crew;
 
 use strict;
